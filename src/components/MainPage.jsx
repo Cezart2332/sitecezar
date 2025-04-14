@@ -102,7 +102,7 @@ const MainPage = () => {
         const url = `https://site-server-29zf.onrender.com${project.Image.url}`
         return(
             <a href={project.Link} target="_blank" rel="noreferrer">
-                <VStack _hover={{transform:"scale(1.05)",opacity:"0.7", transition:"all 0.3s ease-in-out"}} key={project.id} width="500px" background="gray.500" p="2" px="2" borderRadius="lg">
+                <VStack _hover={{transform:"scale(1.05)",opacity:"0.7", transition:"all 0.3s ease-in-out"}} key={project.id} width="350px" height="400px" background="gray.500" p="2" px="2" borderRadius="lg">
                     <Image width="100%" height="300px" src={url}></Image>
                     <Text textStyle="2xl" alignText="center" fontWeight="semibold">{project.Name}</Text>
                     <Text alignText="start" >{project.Description}</Text>
@@ -113,7 +113,7 @@ const MainPage = () => {
     const showCertificates = certificates.map((certificate) => {
         const url = `https://site-server-29zf.onrender.com${certificate.Image.url}`
         return(
-            <Image src={url} boxSize="400px">
+            <Image src={url} boxSize="350px">
             </Image>
         )
     })
@@ -146,7 +146,7 @@ const MainPage = () => {
         <>
         <Flex py="5%"  width="100%" alignItems="center" justifyContent="center" minHeight={{ base: "auto", lg: "100vh" }} flexDirection="column">
             <Text color="white" textStyle="5xl" fontWeight="bold">Turliu Cezar-Mihai</Text>
-            <Text textStyle="3xl" fontStyle="italic" fontWeight="semibold" color="gray.400">Full Stack Web and Mobile Developer</Text>
+            <Text textStyle={{base:"lg", md:"2xl"}} fontStyle="italic" fontWeight="semibold" color="gray.400">Full Stack Web and Mobile Developer</Text>
             <Button variant="surface" colorPalette="blue" borderRadius="xl" fontWeight="semibold" textStyle="lg" width="300px">Download my CV</Button>
         </Flex>
         <Flex py="5%"  id="skills" width="100%"  alignItems="center" justifyContent="center" minHeight={{ base: "auto", lg: "100vh" }} flexDirection="column">
@@ -155,9 +155,9 @@ const MainPage = () => {
                 {skillsToShow}
             </Flex>
         </Flex>
-         <Flex py="5%"  id="projects" width="100%"  position="relative" zIndex="999" alignItems="center" justifyContent="center" minHeight={{ base: "auto", lg: "100vh" }} gap="5" flexDirection="column">
+         <Flex py="5%"  id="projects"   position="relative" zIndex="999" alignItems="center" justifyContent="center" minHeight={{ base: "auto", lg: "100vh" }} gap="5" flexDirection="column">
              <Text textStyle="5xl" fontWeight="bold" color="white">My projects:</Text>
-             <Flex alignItems="center" justifyContent="center" flexWrap="wrap" gap="5">
+             <Flex alignItems="center" width={{base:"70%", md:"100%"}} justifyContent="center" flexWrap="wrap" gap="5">
                  {showProjects}
              </Flex>
          </Flex>
