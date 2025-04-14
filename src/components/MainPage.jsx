@@ -84,12 +84,12 @@ const MainPage = () => {
 
     useEffect(() => {
         const getProjects = async () => {
-            const response = await fetch('http://localhost:1337/api/projects?populate=*')
+            const response = await fetch('https://site-server-29zf.onrender.com/api/projects?populate=*')
             const data = await response.json()
             setProjects(data.data)
         }
         const getCertificates = async () => {
-            const response = await fetch('http://localhost:1337/api/certificates?populate=*')
+            const response = await fetch('https://site-server-29zf.onrender.com/api/certificates?populate=*')
             const data = await response.json()
             console.table(data.data)
             setCertificates(data.data)
@@ -99,7 +99,7 @@ const MainPage = () => {
     },[])
 
     const showProjects = projects.map((project) => {
-        const url = `http://localhost:1337${project.Image.url}`
+        const url = `https://site-server-29zf.onrender.com${project.Image.url}`
         return(
             <a href={project.Link} target="_blank" rel="noreferrer">
                 <VStack _hover={{transform:"scale(1.05)",opacity:"0.7", transition:"all 0.3s ease-in-out"}} key={project.id} width="500px" background="gray.500" p="2" px="2" borderRadius="lg">
@@ -111,7 +111,7 @@ const MainPage = () => {
         )
     })
     const showCertificates = certificates.map((certificate) => {
-        const url = `http://localhost:1337${certificate.Image.url}`
+        const url = `https://site-server-29zf.onrender.com${certificate.Image.url}`
         return(
             <Image src={url} boxSize="400px">
             </Image>
@@ -147,7 +147,7 @@ const MainPage = () => {
         <Flex py="5%"  width="100%" alignItems="center" justifyContent="center" minHeight={{ base: "auto", lg: "100vh" }} flexDirection="column">
             <Text color="white" textStyle="5xl" fontWeight="bold">Turliu Cezar-Mihai</Text>
             <Text textStyle="3xl" fontStyle="italic" fontWeight="semibold" color="gray.400">Full Stack Web and Mobile Developer</Text>
-            <Button variant="surface" colorPalette="blue" borderRadius="xl" fontWeight="semibold" textStyle="lg" width="30%">Download my CV</Button>
+            <Button variant="surface" colorPalette="blue" borderRadius="xl" fontWeight="semibold" textStyle="lg" width="300px">Download my CV</Button>
         </Flex>
         <Flex py="5%"  id="skills" width="100%"  alignItems="center" justifyContent="center" minHeight={{ base: "auto", lg: "100vh" }} flexDirection="column">
             <Text textStyle="5xl" fontWeight="bold" color="white">My Skills:</Text>
@@ -221,11 +221,13 @@ const MainPage = () => {
                 </HStack>
             </Flex>
             <form onSubmit={onSubmit}>
-                <Text textStyle="4xl" fontWeight="bold">Or complete this form</Text>
-                <Input type="text" name="title" mt="2%" size="xl" borderRadius="lg" fontWeight="bolder"  placeholder="Title" textStyle="lg"></Input>
-                <Input type="email" name="email" mt="2%" size="xl" borderRadius="lg" fontWeight="bolder"   placeholder="Email" textStyle="lg"></Input>
-                <Textarea type="text" name="message" mt="2%" size="xl"  height="300px"  borderRadius="lg" fontWeight="bolder"   placeholder="Your message" textStyle="lg"></Textarea>
-                <Button type="submit" width="100%" mt="2%" borderRadius="lg" fontWeight="bolder" variant="outline">Send</Button>
+                <Flex width={{base:"70%", md:"100%"}} flexDirection="column" gap="5" alignItems="center" justifyContent="center">
+                    <Text textStyle="4xl" fontWeight="bold">Or complete this form</Text>
+                    <Input type="text" name="title" mt="2%" size="xl" borderRadius="lg" fontWeight="bolder"  placeholder="Title" textStyle="lg"></Input>
+                    <Input type="email" name="email" mt="2%" size="xl" borderRadius="lg" fontWeight="bolder"   placeholder="Email" textStyle="lg"></Input>
+                    <Textarea type="text" name="message" mt="2%" size="xl"  height="300px"  borderRadius="lg" fontWeight="bolder"   placeholder="Your message" textStyle="lg"></Textarea>
+                    <Button type="submit" width="100%" mt="2%" borderRadius="lg" fontWeight="bolder" variant="outline">Send</Button>
+                </Flex>
             </form>
         </Flex>
         </>
