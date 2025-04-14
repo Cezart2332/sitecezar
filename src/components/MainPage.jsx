@@ -28,19 +28,19 @@ const MainPage = () => {
         {
             name:"React",
             value:70,
-            src:"./src/assets/react.svg",
+            src:"/assets/react.svg",
             description:"A JavaScript library for building user interfaces"
         },
         {
             name:"Mysql",
             value:70,
-            src:"./src/assets/mysql.svg",
+            src:"/assets/mysql.svg",
             description:"A relational database management system"
         },
         {
             name:".Net",
             value:80,
-            src:"./src/assets/dotnet.svg",
+            src:"/assets/dotnet.svg",
             description:"A powerful framework for building web applications and services"
         },
 ]
@@ -172,7 +172,7 @@ const MainPage = () => {
                 <VStack _hover={{transform:"scale(0.85)", transition:"all 0.35s ease-in-out"}} cursor="pointer">
                     <Image
                         boxSize="100px"
-                        src="./src/assets/frontend.svg"
+                        src="/assets/frontend.svg"
                     >
                     </Image>
                     <Text textStyle="xl" fontWeight="semibold">Front-End Development</Text>
@@ -180,7 +180,7 @@ const MainPage = () => {
                 <VStack _hover={{transform:"scale(0.85)", transition:"all 0.35s ease-in-out"}} cursor="pointer">
                     <Image
                         boxSize="100px"
-                        src="./src/assets/backend.svg"
+                        src="/assets/backend.svg"
                     >
                     </Image>
                     <Text textStyle="xl" fontWeight="semibold">Back-End Development</Text>
@@ -188,7 +188,7 @@ const MainPage = () => {
                 <VStack _hover={{transform:"scale(0.85)", transition:"all 0.35s ease-in-out"}} cursor="pointer">
                     <Image
                         boxSize="100px"
-                        src="./src/assets/mobile.svg"
+                        src="/assets/mobile.svg"
                     >
                     </Image>
                     <Text textStyle="xl" fontWeight="semibold">Mobile Development</Text>
@@ -203,7 +203,7 @@ const MainPage = () => {
                     <Button _hover={{transform:"scale(1.25)",opacity:0.5,transition:"all 0.35s ease-in-out"}} variant="none">
                         <Image
                             boxSize="50px"
-                            src="./src/assets/linkedin.svg"
+                            src="/assets/linkedin.svg"
                         >
                         </Image>
                     </Button>
@@ -212,7 +212,7 @@ const MainPage = () => {
                         <Button _hover={{transform:"scale(1.25)",opacity:0.5,transition:"all 0.35s ease-in-out"}} variant="none">
                             <Image
                                 boxSize="50px"
-                                src="./src/assets/instagram.svg"
+                                src="/assets/instagram.svg"
                             >
                             </Image>
                         </Button>
