@@ -147,7 +147,7 @@ const MainPage = () => {
         <Flex py="5%"  width="100%" alignItems="center" justifyContent="center" minHeight={{ base: "auto", lg: "100vh" }} flexDirection="column">
             <Text color="white" textStyle="5xl" fontWeight="bold">Turliu Cezar-Mihai</Text>
             <Text textStyle={{base:"lg", md:"2xl"}} fontStyle="italic" fontWeight="semibold" color="gray.400">Full Stack Web and Mobile Developer</Text>
-            <Button variant="surface" colorPalette="blue" borderRadius="xl" fontWeight="semibold" textStyle="lg" width="300px">Download my CV</Button>
+            <a href="/assets/cv.pdf" download><Button variant="surface" colorPalette="blue" borderRadius="xl" fontWeight="semibold" textStyle="lg" width="300px">Download my CV</Button></a>
         </Flex>
         <Flex py="5%"  id="skills" width="100%"  alignItems="center" justifyContent="center" minHeight={{ base: "auto", lg: "100vh" }} flexDirection="column">
             <Text textStyle="5xl" fontWeight="bold" color="white">My Skills:</Text>
