@@ -74,7 +74,7 @@ const MainPage = () => {
                         zIndex="10"
 
                     >
-                        <Text alignText="center" color="black" textStyle="lg">{skill.description}</Text>
+                        <Text as="h3" alignText="center" color="black" textStyle="lg">{skill.description}</Text>
                     </MotionFlex>
                 )}
                 <ProgressWithVisibility values={values} />
@@ -104,8 +104,8 @@ const MainPage = () => {
             <a href={project.Link} target="_blank" rel="noreferrer">
                 <VStack _hover={{transform:"scale(1.05)",opacity:"0.7", transition:"all 0.3s ease-in-out"}} key={project.id} width="350px" height="400px" background="gray.500" p="2" px="2" borderRadius="lg">
                     <Image width="100%" height="300px" src={url}></Image>
-                    <Text textStyle="2xl" alignText="center" fontWeight="semibold">{project.Name}</Text>
-                    <Text alignText="start" >{project.Description}</Text>
+                    <Text as="h3" textStyle="2xl" alignText="center" fontWeight="semibold">{project.Name}</Text>
+                    <Text as="h2" alignText="start" >{project.Description}</Text>
                 </VStack>
             </a>
         )
@@ -145,18 +145,18 @@ const MainPage = () => {
     return (
         <>
         <Flex py="5%"  width="100%" alignItems="center" justifyContent="center" minHeight={{ base: "auto", lg: "100vh" }} flexDirection="column">
-            <Text color="white" textStyle="5xl" fontWeight="bold">Turliu Cezar-Mihai</Text>
-            <Text textStyle={{base:"lg", md:"2xl"}} fontStyle="italic" fontWeight="semibold" color="gray.400">Full Stack Web and Mobile Developer</Text>
+            <Text as="h1" color="white" textStyle="5xl" fontWeight="bold">Turliu Cezar-Mihai</Text>
+            <Text as="h2" textStyle={{base:"lg", md:"2xl"}} fontStyle="italic" fontWeight="semibold" color="gray.400">Full Stack Web and Mobile Developer</Text>
             <a href="/assets/cv.pdf" download><Button variant="surface" colorPalette="blue" borderRadius="xl" fontWeight="semibold" textStyle="lg" width="300px">Download my CV</Button></a>
         </Flex>
         <Flex py="5%"  id="skills" width="100%"  alignItems="center" justifyContent="center" minHeight={{ base: "auto", lg: "100vh" }} flexDirection="column">
-            <Text textStyle="5xl" fontWeight="bold" color="white">My Skills:</Text>
+            <Text as="h1" textStyle="5xl" fontWeight="bold" color="white">My Skills:</Text>
             <Flex width="80%" alignItems="center" justifyContent="center" flexWrap="wrap" gap="5" >
                 {skillsToShow}
             </Flex>
         </Flex>
          <Flex py="5%"  id="projects"   position="relative" zIndex="999" alignItems="center" justifyContent="center" minHeight={{ base: "auto", lg: "100vh" }} gap="5" flexDirection="column">
-             <Text textStyle="5xl" fontWeight="bold" color="white">My projects:</Text>
+             <Text as="h1" textStyle="5xl" fontWeight="bold" color="white">My projects:</Text>
              <Flex alignItems="center" width={{base:"70%", md:"100%"}} justifyContent="center" flexWrap="wrap" gap="5">
                  {showProjects}
              </Flex>
